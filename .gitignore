@@ -10,3 +10,4 @@ chatbot_model.model/variables/variables.data-00000-of-00001
 __pycache__/
 instances/
 .webassets-cache
+chatbotmodel.h5
