@@ -6,3 +6,7 @@ instances/
 .webassets-cache
 
 __pycache__/
+chatbotmodel.h5
+classes.pkl
+words.pkl
+chatbot_model.model/
