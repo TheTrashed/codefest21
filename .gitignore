@@ -1,7 +1,12 @@
+venv/
+.venv
+venv.bak
+
+*.pkl
+*.pb
+chatbot_model.model/variables/variables.index
+chatbot_model.model/variables/variables.data-00000-of-00001
+
 __pycache__/
 instances/
 .webassets-cache
-
-.venv
-venv/
-venv.bak
