@@ -6,9 +6,9 @@ import numpy as np
 import os
 
 import nltk
-# nltk.download('punkt')
-# nltk.download('wordnet')
-# nltk.download('omw-1.4')
+nltk.download('punkt')
+nltk.download('wordnet')
+nltk.download('omw-1.4')
 from nltk.stem import WordNetLemmatizer
 
 from tensorflow.keras.models import Sequential
@@ -63,7 +63,7 @@ for document in documents:
     bag = []
     word_patterns = document[0]
     word_patterns = [lemmatizer.lemmatize(word.lower()) for word in word_patterns]
-    
+
     for word in words:
         bag.append(1) if word in word_patterns else bag.append(0)
 

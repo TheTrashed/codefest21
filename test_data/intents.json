@@ -10,12 +10,12 @@
 			"context_set": ""
 		},
 		{"tag": "delivery_timing",
-			"patterns": ["when do you deliver?", "when can I recieve my order?", "what is the expected delivery time?", "time", "timing", "delivery time"],
-			"responses": ["The order wil be delivered in 3 working days"],
+			"patterns": ["when do you deliver?", "when can I receive my order?", "what is the expected delivery time?", "time", "timing", "delivery time"],
+			"responses": ["The order will be delivered in 3 working days"],
 			"context_set": ""
 		},
 		{"tag": "shop_timing",
-			"patterns": ["when are you guys open?", "what are your hours of operation?", "what are your hours?", "time", "timing"],
+			"patterns": ["when are you guys open?", "what are your hours of operation?", "what are your hours?", "time", "timing", "shop"],
 			"responses": ["we are open 24/7"],
 			"context_set": ""
 		},

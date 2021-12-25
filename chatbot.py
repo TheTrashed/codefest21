@@ -46,8 +46,8 @@ def bag_of_words(lemmatizer, words, sentence):
     return np.array(bag)
 
 
-def predict_class(lemmatizer, model, sentence, classes):
-    bow = bag_of_words(lemmatizer, sentence)
+def predict_class(lemmatizer, model, words, sentence, classes):
+    bow = bag_of_words(lemmatizer, words, sentence)
     res = model.predict(np.array([bow]))[0]
     ERROR_THRESHOLD = 0.25
     results = [[i, r] for i, r in enumerate(res) if r > ERROR_THRESHOLD]
@@ -64,7 +64,7 @@ def predict_class(lemmatizer, model, sentence, classes):
 def get_response(message):
     lemmatizer, intents_json, words, classes, model = chatbot_initialise()
 
-    intents_list = predict_class(lemmatizer, model, message, classes)
+    intents_list = predict_class(lemmatizer, model, words, message, classes)
 
     tag = intents_list[0]['intent']
     list_of_intents = intents_json['intents']
