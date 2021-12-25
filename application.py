@@ -27,10 +27,16 @@ app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
+
 @app.route("/")
 def index():
-    greeting = "Hi there, how can I help you?"
-    return render_template("index.html", greeting=greeting)
+    chat_items = [
+        (0, 'hello'),
+        (1, 'ok'),
+        (1, 'no')
+    ]
+    return render_template("index.html", chat_items=chat_items)
+
 
 if __name__ == '__main__':
-    app.run(port=port)
+    app.run(debug=True, port=port)
