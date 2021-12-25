@@ -10,17 +10,17 @@
 			"context_set": ""
 		},
 		{"tag": "delivery_timing",
-			"patterns": ["when do you deliver?", "when can I recieve my order?", "what is the expected delivery time?"],
+			"patterns": ["when do you deliver?", "when can I recieve my order?", "what is the expected delivery time?", "time", "timing", "delivery time"],
 			"responses": ["The order wil be delivered in 3 working days"],
 			"context_set": ""
 		},
 		{"tag": "shop_timing",
-			"patterns": ["when are you guys open?", "what are your hours of operation?", "what are your hours?"],
+			"patterns": ["when are you guys open?", "what are your hours of operation?", "what are your hours?", "time", "timing"],
 			"responses": ["we are open 24/7"],
 			"context_set": ""
 		},
 		{"tag": "name",
-			"patterns": ["what is your name?", "whats should I call you?", "what should I call you?"],
+			"patterns": ["what is your name?", "whats should I call you?", "what should I call you?", "name"],
 			"responses": ["My name is XYZ"],
 			"context_set": ""
 		},
