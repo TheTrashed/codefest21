@@ -47,7 +47,7 @@ class Chatbox {
         this.messages.push(msg1);
 
 			  // const PORT = process.env.PORT || '8080'
-        fetch('{{ request.script_root|tojson }}'+ '/predict', {
+        fetch('/predict', {
             method: 'POST',
             body: JSON.stringify({ message: text1 }),
             mode: 'cors',
