@@ -12,8 +12,8 @@ CORS(app)
 # socketio = SocketIO(app)
 
 
-@app.get("/")
-def index_get():
+@app.route("/", methods=['GET'])
+def index():
     return render_template("base.html")
 
 
