@@ -1,11 +1,15 @@
+import os
+
 from flask import Flask, render_template, request, jsonify
+from flask_cors import CORS
 from flask_socketio import SocketIO, emit
 
 from chatbot import get_response
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'secret!'
-socketio = SocketIO(app)
+CORS(app)
+# app.config['SECRET_KEY'] = 'secret!'
+# socketio = SocketIO(app)
 
 
 @app.get("/")
@@ -13,7 +17,7 @@ def index_get():
     return render_template("base.html")
 
 
-@app.post("/predict")
+@app.route("/predict", methods=['POST'])
 def predict():
     text = request.get_json().get("message")
     response = get_response(text)
@@ -22,4 +26,5 @@ def predict():
 
 
 if __name__ == "__main__":
-    socketio.run(app)
+    app.run()
+    # socketio.run(app, port=int(os.environ.get('PORT', '5000')))
