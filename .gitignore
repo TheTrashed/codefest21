@@ -2,9 +2,6 @@ venv/
 .venv
 venv.bak
 
-*.pkl
-*.pb
-
 __pycache__/
 instances/
 .webassets-cache
